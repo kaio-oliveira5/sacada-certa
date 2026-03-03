@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmação escolar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/escola.css">
+</head>
+
+<body>
+
+    <!-- TOPO -->
+    <header class="topo">
+        <div class="logos">
+            <img src="logo/Captura de tela 2025-08-25 142312.jpg" alt="Prefeitura">
+            <img src="" alt="Projeto Esportivo">
+        </div>
+    </header>
+
+    <main>
+
+        <section class="form-box">
+            <h1>Confirmação da escola</h1>
+
+            <p class="descricao">
+                Verifique os dados abaixo e confirme que o aluno está matriculado nesta unidade escolar.
+            </p>
+
+            <!-- DADOS DO ALUNO (SOMENTE LEITURA) -->
+            <fieldset>
+                <legend>Dados do Aluno</legend>
+
+                <label>Nome do Aluno</label>
+                <input type="text" id="alunoNome" readonly>
+
+                <label>Data de Nascimento</label>
+                <input type="text" id="alunoNascimento" readonly>
+
+                <label>Escola Informada</label>
+                <input type="text" id="alunoEscola" readonly>
+            </fieldset>
+
+            <!-- DADOS DO RESPONSÁVEL -->
+            <fieldset>
+                <legend>Responsável</legend>
+
+                <label>Nome do Responsável</label>
+                <input type="text" id="responsavelNome" readonly>
+
+            </fieldset>
+
+
+            <form id="formEscola">
+
+                <!-- CONFIRMAÇÃO DA ESCOLA -->
+                <fieldset>
+                    <legend>Confirmação da Escola</legend>
+
+                    <label for="dataAssinatura">Data</label>
+                    <input type="date" id="dataAssinatura" required>
+
+                    <label>Declaração</label>
+                    <input type="checkbox" id="declaracao" name="declaracao" required>
+                    <p class="dec"> Declaro que o aluno acima informado é estudante regularmente matriculado nesta
+                        unidade escolar.</p>
+
+                    <label>Assinatura do Diretor(a)</label>
+
+                    <canvas id="assinaturaEscola"></canvas>
+
+                    <div class="assinatura-botoes">
+                        <button type="button" id="limparAssinatura">Limpar</button>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-principal">
+                    Confirmar e enviar
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>
+            © 2026 Secretaria de Esportes, Lazer e Juventude. Todos os direitos reservados.<br>
+        <p class="sistema">Sistema desenvolvido por Kaio Oliveira</p>
+        </p>
+    </footer>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script src="js/assinatura-escola.js"></script>
+    <script type="module" src="js/envio-escola.js"></script>
+</body>
+
+</html>

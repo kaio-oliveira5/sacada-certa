@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ficha de Inscrição – Projeto Esportivo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <header class="topo">
+            <div class="logos">
+                <img src="logo/Captura de tela 2025-08-25 142312.jpg" alt="Prefeitura">
+                <img src="logo/Banner Sacada Certa 120x170-1.pdf" alt="Projeto">
+            </div>
+        </header>
+
+        <h1>Ficha de Inscrição – Etapa do Responsável</h1>
+
+        <form id="formInscricao">
+
+            <!-- DADOS DO ALUNO -->
+            <fieldset>
+                <legend>Dados do Aluno</legend>
+
+                <label for="fotoAluno">Foto do aluno</label>
+                <input type="file" id="fotoAluno" name="fotoAluno" accept="image/jpeg, image/png, image/webp" required>
+
+                <label for="nomeAluno">Nome completo</label>
+                <input type="text" id="nomeAluno" name="nomeAluno" required>
+
+                <label for="dataNascimento">Data de nascimento</label>
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+                <label for="tipoDocumentoAluno">Documento do aluno</label>
+                <select id="tipoDocumentoAluno" name="tipoDocumentoAluno" required>
+                    <option value="">Selecione</option>
+                    <option value="cpf">CPF</option>
+                    <option value="rg">RG</option>
+                </select>
+                <small class="erro" id="erroCpfAluno"></small>
+
+                <label for="documentoAluno">Número do documento</label>
+                <input type="text" id="documentoAluno" name="documentoAluno" inputmode="numeric"
+                    placeholder="Somente números" required>
+
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" required>
+
+                <label for="numero">Número</label>
+                <input type="text" id="numero" name="numero" inputmode="numeric" placeholder="Número da residência"
+                    required>
+
+                <label for="complemento">Complemento</label>
+                <input type="text" id="complemento" name="complemento">
+
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro" required>
+
+                <label for="escolaAluno">Escola do aluno</label>
+                <select id="escolaAluno" name="escolaAluno" required>
+                    <option value="">Selecione</option>
+
+
+                    <option value="escola_antonio_adriano_guerra">
+                        Escola Antônio Adriano Guerra
+                    </option>
+
+                    <option value="escola_aparecida">
+                        Escola Aparecida
+                    </option>
+
+                    <option value="escola_carlos_barbosa">
+                        Escola Carlos Barbosa
+                    </option>
+
+                    <option value="escola_cardeal_arcoverde">
+                        Escola Cardeal Arcoverde
+                    </option>
+
+                    <option value="escola_dom_vital">
+                        Escola Dom Vital
+                    </option>
+
+                    <option value="escola_elisa_tramontina">
+                        Escola Elisa Tramontina
+                    </option>
+
+                    <option value="escola_jose_chies">
+                        Escola Prefeito José Chies
+                    </option>
+
+                    <option value="escola_papepi">
+                        Escola Padre Pedro Piccoli
+                    </option>
+
+                    <option value="escola_sao_roque">
+                        Escola São Roque
+                    </option>
+
+                    <option value="escola_bordini">
+                        Escola Salvador Bordini
+                    </option>
+
+                    <option value="escola_santa_rosa">
+                        Escola Santa Rosa
+                    </option>
+
+                    <option value="teste">
+                        Escola Teste
+                    </option>
+
+                </select>
+
+                <!-- SAÚDE (NOVO) -->
+                <div class="saude-box">
+                    <label class="saude-titulo" id="saudeTitulo">O aluno possui algum problema de saúde?</label>
+
+                    <div class="saude-opcoes" role="radiogroup" aria-labelledby="saudeTitulo">
+                        <label for="saudeNao">
+                            <input type="radio" id="saudeNao" name="saudePossui" value="nao" required>
+                            Não
+                        </label>
+
+                        <label for="saudeSim">
+                            <input type="radio" id="saudeSim" name="saudePossui" value="sim">
+                            Sim
+                        </label>
+                    </div>
+
+                    <div id="saudeDetalhesBox" style="display:none;">
+                        <label for="saudeDetalhes">Se sim, descreva o problema de saúde.</label>
+                        <input type="text" id="saudeDetalhes" name="saudeDetalhes">
+                        <small class="erro" id="erroSaudeDetalhes" style="display:none;"></small>
+                    </div>
+                </div>
+                <!-- /SAÚDE -->
+
+            </fieldset>
+
+            <!-- DADOS DOS RESPONSÁVEIS -->
+            <fieldset>
+                <legend>Dados dos Responsáveis</legend>
+
+                <label for="nomePai">Nome do pai</label>
+                <input type="text" id="nomePai" name="nomePai" required>
+
+                <label for="telefonePai">Celular do pai</label>
+                <input type="text" id="telefonePai" name="telefonePai" inputmode="numeric" placeholder="(00) 00000-0000"
+                    required>
+
+                <label for="nomeMae">Nome da mãe</label>
+                <input type="text" id="nomeMae" name="nomeMae" required>
+
+                <label for="telefoneMae">Celular da mãe</label>
+                <input type="text" id="telefoneMae" name="telefoneMae" inputmode="numeric" placeholder="(00) 00000-0000"
+                    required>
+
+                <label for="contatoEmergencia">Contato de emergência</label>
+                <input type="text" id="contatoEmergencia" name="contatoEmergencia">
+
+                <label for="telefoneEmergencia">Telefone de emergência</label>
+                <input type="text" id="telefoneEmergencia" name="telefoneEmergencia" inputmode="numeric"
+                    placeholder="(00) 00000-0000">
+            </fieldset>
+
+            <!-- NÚCLEO -->
+            <fieldset>
+                <legend>Núcleo</legend>
+
+                <label for="nucleo">Núcleo</label>
+                <select id="nucleo" name="nucleo" required>
+                    <option value="aurora">Ginásio do Aurora</option>
+                </select>
+
+                <label for="turnoTreino">Turno do treino</label>
+                <select id="turnoTreino" name="turnoTreino" required>
+                    <option value="tarde">Tarde</option>
+                </select>
+            </fieldset>
+
+            <!-- AUTORIZAÇÕES -->
+            <fieldset>
+                <legend>Autorizações e Ciência</legend>
+
+                <label>
+                    <input type="checkbox" id="usoImagem" name="usoImagem" required>
+                    Autorizo o uso de imagem do aluno para fins institucionais.
+                </label>
+
+                <label>
+                    <input type="checkbox" id="cienteRegras" name="cienteRegras" required>
+                    Estou ciente de que faltas repetidas podem resultar na perda da vaga.
+                </label>
+            </fieldset>
+
+            <!-- ASSINATURA -->
+            <fieldset>
+                <legend>Assinatura do Responsável</legend>
+
+                <label for="nomeResponsavel">Nome completo do responsável</label>
+                <input type="text" id="nomeResponsavel" name="nomeResponsavel" required>
+
+                <label for="dataAssinatura">Data</label>
+                <input type="date" id="dataAssinatura" name="dataAssinatura" required>
+
+                <canvas id="assinaturaCanvas"></canvas>
+
+                <div class="assinatura-botoes">
+                    <button type="button" id="limparAssinatura">
+                        Limpar assinatura
+                    </button>
+                </div>
+            </fieldset>
+
+            <button type="submit" id="btnEnviar">
+                Enviar para a escola
+            </button>
+
+        </form>
+
+    </main>
+
+    <footer class="rodape">
+        <p>
+            © 2026 Secretaria de Esportes, Lazer e Juventude. Todos os direitos reservados.<br>
+        <p class="sistema">Sistema desenvolvido por Kaio Oliveira</p>
+        </p>
+    </footer>
+
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/envio-responsavel.js"></script>
+    <script src="js/assinatura-responsavel.js"></script>
+    <script src="js/mascara.js"></script>
+    <script src="js/validacao-responsavel.js"></script>
+    <script src="js/saude.js"></script>
+</body>
+
+</html>
