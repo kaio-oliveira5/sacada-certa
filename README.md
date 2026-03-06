@@ -1,161 +1,79 @@
 📘 Leia este arquivo README em:
 - 🇧🇷 Português (este arquivo)
 - 🇮🇹 Italiano → [README.it.md](README.IT.md)
-<!-- 
 
-# Projeto BBBE – Bom de Bola Bom na Escola ⚽📄
+# Projeto Sacada Certa
 
-Sistema web para **inscrição, validação escolar e geração de documento oficial em PDF** do projeto **Bom de Bola Bom na Escola**, desenvolvido para o município de **Carlos Barbosa – RS**.
+Sistema digital de inscrição para projetos esportivos desenvolvido para a Secretaria de Esportes, Lazer e Juventude do município de Carlos Barbosa.
 
-O sistema automatiza todo o fluxo:
-**Responsável → Escola → Secretaria**, garantindo segurança, integridade dos dados e rastreabilidade do processo.
+O sistema permite que responsáveis realizem a inscrição de alunos em projetos esportivos de forma online, com assinatura digital e confirmação da escola.
 
 ---
 
-## 🚀 Visão Geral
+## 🚀 Funcionalidades
 
-O Projeto BBBE permite:
-
-- Inscrição online de alunos pelos responsáveis
-- Coleta de dados completos do aluno (incluindo saúde e foto)
+- Formulário de inscrição online
+- Upload da foto do aluno
 - Assinatura digital do responsável
-- Validação e assinatura digital da escola
-- Geração de **documento final em PDF**
-- Envio automático de e-mails em cada etapa
-- Controle de status no Firestore
+- Armazenamento das inscrições no Firebase (Cloud Firestore)
+- Envio automático de e-mail para a escola
+- Confirmação da escola com assinatura digital
+- Envio automático do documento final para a Secretaria
+- Geração de documento com todas as informações da inscrição
 
-Tudo sem papel, sem retrabalho e com histórico confiável.
+---
+
+## 🛠 Tecnologias Utilizadas
+
+Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+Backend / Cloud
+- Firebase
+- Cloud Firestore
+- Firebase Hosting
+
+Automação
+- Google Apps Script
+- Gmail API
+
+Outros recursos
+- Canvas API (assinatura digital)
+- Base64 Image Encoding
 
 ---
 
 ## 🔄 Fluxo do Sistema
 
-### 1️⃣ Responsável
-- Preenche o formulário de inscrição
-- Informa dados do aluno, responsáveis e saúde
-- Assina digitalmente
-- Envia o formulário
-
-📌 Resultado:
-- Dados salvos no Firestore
-- Status: `aguardando_escola`
-- E-mail enviado automaticamente para a escola
+1. Responsável acessa o sistema
+2. Preenche o formulário de inscrição
+3. Assina digitalmente
+4. Os dados são salvos no Firebase
+5. A escola recebe um e-mail com o link para confirmação
+6. A escola confirma e assina digitalmente
+7. A Secretaria recebe o documento final por e-mail
 
 ---
 
-### 2️⃣ Escola
-- Recebe um e-mail com link único
-- Visualiza os dados do aluno
-- Confere documento do responsável
-- Assina digitalmente
-- Confirma a inscrição
+## 🔒 Segurança
 
-📌 Proteções:
-- O link **só pode ser usado uma vez**
-- Reenvio é bloqueado por regras e transação no Firestore
+O sistema utiliza regras de segurança do Firebase para:
 
-📌 Resultado:
-- Status atualizado para `confirmado_escola`
-- Documento final liberado
+- permitir criação de inscrições
+- permitir leitura somente por ID
+- impedir listagem de inscrições
+- permitir confirmação apenas uma vez pela escola
 
 ---
 
-### 3️⃣ Secretaria
-- Recebe e-mail automático
-- Acessa o **documento final**
-- Pode:
-  - Visualizar no navegador
-  - Baixar o PDF oficial (A4)
+## 🌐 Hospedagem
 
-O PDF contém:
-- Dados completos do aluno
-- Foto
-- Informações de saúde
-- Responsáveis
-- Assinaturas do responsável e da escola
+O sistema é hospedado utilizando **Firebase Hosting**.
 
 ---
 
+## 👨‍💻 Desenvolvedor
 
-## 🧠 Tecnologias Utilizadas
-
-- **HTML5 / CSS3**
-- **JavaScript (ES Modules)**
-- **Firebase**
-  - Firestore
-  - Hosting
-- **Google Apps Script**
-  - Envio de e-mails
-- **html2canvas**
-- **jsPDF**
-- **Canvas API**
-  - Assinatura digital
-
----
-
-## 🔐 Segurança e Confiabilidade
-
-### Firestore Rules
-- Modo teste **desativado**
-- Regras explícitas para leitura e escrita
-- Controle por status do documento
-
-### Proteções implementadas
-- Transações (`runTransaction`) no Firestore
-- Bloqueio de reenvio após confirmação da escola
-- Links únicos por inscrição
-- Validação de assinatura obrigatória
-- Escape de HTML em e-mails
-
----
-
-## 📄 Documento Final (PDF)
-
-- Layout A4
-- Pré-visualização no navegador
-- Download sob demanda
-- Conteúdo fiel ao que está salvo no Firestore
-- Ideal para arquivamento institucional
-
----
-
-## 📧 E-mails Automáticos
-
-- Escola recebe link de validação
-- Secretaria recebe link do documento final
-- Envio via Google Apps Script
-- Não bloqueia o fluxo em caso de falha de e-mail
-
----
-
-## 🛠️ Deploy
-
-Hospedado em:
-- **Firebase Hosting**
-
-Após deploy:
-- Sistema pronto para uso imediato
-- Sem necessidade de backend próprio
-
-
-## 📌 Observações Importantes
-
-- O sistema foi pensado para ser:
-  - reutilizável (outros projetos esportivos)
-  - escalável
-  - simples de manter
-- Toda a lógica crítica está protegida no Firestore
-- Interface pensada para uso em desktop, tablet e celular
-
----
-
-## 👨‍💻 Autor
-
-Projeto desenvolvido por **Kaio Oliveira**  
-Sistema real, utilizado em contexto institucional.
-
----
-
-## ✅ Status do Projeto
-
-🟢 **Finalizado e pronto para produção** -->
+Desenvolvido por **Kaio Oliveira**.

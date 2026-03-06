@@ -189,35 +189,37 @@ document.addEventListener('DOMContentLoaded', () => {
         </p>
 
         <p style="margin:0 0 10px 0">
-          <strong>Aluno(a):</strong> ${dadosInscricao.aluno.nome}<br>
-          <strong>Responsável:</strong> ${dadosInscricao.assinaturaResponsavel.nome}
+            <strong>Aluno(a):</strong> ${dadosInscricao.aluno.nome}<br>
+            <strong>Responsável:</strong> ${dadosInscricao.assinaturaResponsavel.nome}
         </p>
 
         <p style="margin:0 0 10px 0">
-          Para confirmar que o(a) aluno(a) está matriculado(a) nesta unidade e realizar a assinatura
-          da confirmação escolar, acesse o link abaixo:
+            Para confirmar que o(a) aluno(a) está matriculado(a) nesta unidade e realizar a assinatura
+            da confirmação escolar, acesse o link abaixo:
         </p>
 
         <p style="margin:0 0 14px 0">
-          <a href="${linkEscola}" target="_blank" style="font-weight:bold">
+        <a href="${linkEscola}" target="_blank" style="font-weight:bold">
             Acessar formulário de confirmação da escola
-          </a>
+        </a>
         </p>
 
         <hr style="border:none; border-top:1px solid #e6e6e6; margin:16px 0">
 
         <p style="margin:0; font-size:13px; color:#555">
-          Em caso de dúvidas, entre em contato com a <strong>Secretaria de Esportes, Lazer e Juventude</strong>.<br>
-          <strong>Contato:</strong> (54) 3433-2952
+            Em caso de dúvidas, entre em contato com a <strong>Secretaria de Esportes, Lazer e Juventude</strong>.<br>
+            <strong>Contato:</strong> (54) 3433-2952
         </p>
 
         <p style="margin:10px 0 0 0; font-size:12px; color:#777">
-          Município de Carlos Barbosa
+            Município de Carlos Barbosa
         </p>
-      </div>
+    </div>
     `;
 
         // 🚀 Envia e-mail via Apps Script
+        const EMAIL_SECRETARIA = "sacadacerta@carlosbarbosa.rs.gov.br"; // cópia oculta para controle interno
+
         const resp = await fetch(
             'https://script.google.com/macros/s/AKfycbyR88H2DtfBiHbTYz6qBzzwrm1F8YSoYXPu81ypcLtBbvu9bvLkpcLdAZtKFbKKrv6eEQ/exec',
             {
@@ -227,6 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 keepalive: true,
                 body: JSON.stringify({
                     emailDestino: emailEscola,
+                    cc: EMAIL_SECRETARIA,
                     assunto,
                     mensagemHtml
                 })

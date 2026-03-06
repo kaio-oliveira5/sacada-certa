@@ -292,7 +292,6 @@ const ESCOLAS_MAP = {
     escola_santa_rosa: 'Escola Santa Rosa',
     escola_cardeal_arcoverde: 'Escola Cardeal Arcoverde',
     escola_bordini: 'Escola Salvador Bordini',
-    teste: 'Escola Teste'
 };
 
 document.addEventListener('DOMContentLoaded', async () => {
