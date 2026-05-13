@@ -2,78 +2,153 @@
 - 🇮🇹 Italiano (questo file)
 - 🇧🇷 Portoghese → [README.md](README.md)
 
-# Progetto Sacada Certa
+# 🏐 Sacada Certa
 
-Sistema digitale di iscrizione per progetti sportivi sviluppato per la Segreteria dello Sport, Tempo Libero e Gioventù del comune di Carlos Barbosa.
+Piattaforma web sviluppata per la Segreteria dello Sport, Tempo Libero e Gioventù del comune di Carlos Barbosa – RS (Brasile), focalizzata sulla digitalizzazione delle iscrizioni e gestione dei partecipanti ai progetti sportivi di pallavolo.
 
-Il sistema permette ai responsabili di iscrivere gli studenti ai progetti sportivi online, con firma digitale e conferma della scuola.
+✅ Sistema in produzione  
+✅ Iscrizioni sportive online  
+✅ Firme digitali  
+✅ Integrazione con Firebase  
+✅ Flusso automatizzato tra responsabili, scuola e segreteria  
 
 ---
 
-## 🚀 Funzionalità
+# 🚀 Panoramica
+
+Il progetto **Sacada Certa** è stato sviluppato per automatizzare il processo di iscrizione degli studenti ai progetti sportivi comunali, eliminando moduli cartacei e riducendo i processi manuali.
+
+Il sistema collega:
+
+**Responsabile → Scuola → Segreteria**
+
+garantendo:
+
+- Sicurezza dei dati
+- Flusso digitale automatizzato
+- Integrità delle informazioni
+- Firme digitali
+- Archiviazione cloud
+- Tracciabilità del processo
+
+---
+
+# 🧠 Funzionalità
 
 - Modulo di iscrizione online
 - Upload della foto dello studente
-- Firma digitale del responsabile
-- Salvataggio delle iscrizioni su Firebase (Cloud Firestore)
-- Invio automatico di email alla scuola
-- Conferma della scuola con firma digitale
-- Invio automatico del documento finale alla Segreteria
-- Generazione del documento con tutte le informazioni dell’iscrizione
+- Firma digitale
+- Validazione scolastica
+- Invio automatico di e-mail
+- Generazione del documento finale
+- Persistenza dati su Firestore
+- Controllo dello stato delle iscrizioni
 
 ---
 
-## 🛠 Tecnologie Utilizzate
+# 🔄 Flusso del Sistema
 
-Frontend
-- HTML5
-- CSS3
-- JavaScript
+## 1️⃣ Responsabile
 
-Backend / Cloud
-- Firebase
-- Cloud Firestore
+- Compila il modulo
+- Inserisce i dati dello studente
+- Firma digitalmente
+- Completa l’iscrizione
+
+---
+
+## 2️⃣ Scuola
+
+- Riceve un link univoco via e-mail
+- Conferma i dati
+- Firma digitalmente
+- Valida l’iscrizione
+
+---
+
+## 3️⃣ Segreteria
+
+- Riceve il documento finale
+- Effettua il controllo istituzionale
+- Archivia i registri
+
+---
+
+# 🛠️ Tecnologie Utilizzate
+
+| Frontend | Backend / Cloud |
+|---|---|
+| HTML5 | Firebase |
+| CSS3 | Cloud Firestore |
+| JavaScript | Firebase Hosting |
+| Canvas API | Google Apps Script |
+| Base64 | Gmail API |
+
+---
+
+# 🔐 Sicurezza
+
+Il sistema utilizza le regole di sicurezza Firebase per:
+
+- Permettere la creazione delle iscrizioni
+- Limitare la lettura tramite ID
+- Impedire la visualizzazione completa delle iscrizioni
+- Bloccare conferme multiple
+- Validare le firme digitali
+
+---
+
+# 🚧 Sfide Tecniche
+
+- Implementazione firme digitali
+- Controllo validazione unica
+- Automazione e-mail
+- Persistenza sicura su Firestore
+- Generazione dinamica documenti
+- Gestione del flusso multiutente
+
+---
+
+# 📱 Compatibilità
+
+Sistema responsive compatibile con:
+
+- Desktop
+- Tablet
+- Smartphone
+
+---
+
+# 🛠️ Deploy
+
+Ospitato tramite:
+
 - Firebase Hosting
 
-Automazione
-- Google Apps Script
-- Gmail API
+---
 
-Altre tecnologie
-- Canvas API (firma digitale)
-- Base64 Image Encoding
+# 👨‍💻 Il Mio Ruolo nel Progetto
+
+Responsabile dello sviluppo completo del sistema:
+
+- Frontend
+- Integrazione Firebase
+- Regole di sicurezza
+- Firma digitale
+- Automazione e-mail
+- Deploy e pubblicazione
 
 ---
 
-## 🔄 Flusso del Sistema
 
-1. Il responsabile accede al sistema
-2. Compila il modulo di iscrizione
-3. Firma digitalmente
-4. I dati vengono salvati su Firebase
-5. La scuola riceve un’email con il link per la conferma
-6. La scuola conferma e firma digitalmente
-7. La Segreteria riceve il documento finale via email
+# 👨‍💻 Sviluppatore
+
+Sviluppato da **Kaio Oliveira**
+
+Sistema reale utilizzato dalla Segreteria dello Sport, Tempo Libero e Gioventù di Carlos Barbosa – RS.
 
 ---
 
-## 🔒 Sicurezza
+# ✅ Stato del Progetto
 
-Il sistema utilizza le regole di sicurezza di Firebase per:
-
-- permettere la creazione delle iscrizioni
-- permettere la lettura solo tramite ID
-- bloccare la lista delle iscrizioni
-- permettere la conferma una sola volta
-
----
-
-## 🌐 Hosting
-
-Il sistema è ospitato tramite **Firebase Hosting**.
-
----
-
-## 👨‍💻 Sviluppatore
-
-Sviluppato da **Kaio Oliveira**.
+🟢 **Completato e in produzione**
