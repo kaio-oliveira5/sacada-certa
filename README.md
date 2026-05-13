@@ -2,7 +2,7 @@
 - 🇧🇷 Português (este arquivo)
 - 🇮🇹 Italiano → [README.it.md](README.IT.md)
 
-🏐 Sacada Certa
+#🏐 Sacada Certa
 
 Sistema web desenvolvido para a Secretaria de Esportes, Lazer e Juventude do município de Carlos Barbosa – RS, responsável pela digitalização do processo de inscrição em projetos esportivos municipais.
 
@@ -13,7 +13,7 @@ Sistema web desenvolvido para a Secretaria de Esportes, Lazer e Juventude do mun
 ✅ Automação de e-mails
 ✅ Utilizado em contexto institucional
 
-🚀 Visão Geral
+##🚀 Visão Geral
 
 O projeto Sacada Certa foi desenvolvido para automatizar o processo de inscrição de alunos em projetos esportivos municipais, eliminando formulários físicos e reduzindo processos manuais.
 
@@ -30,7 +30,7 @@ Assinaturas digitais
 Armazenamento em nuvem
 Rastreabilidade do processo
 
-🧠 Funcionalidades
+##🧠 Funcionalidades
 
 Formulário de inscrição online
 Upload de foto do aluno
@@ -41,7 +41,7 @@ Geração de documento final
 Persistência no Firestore
 Controle de status das inscrições
 
-🔄 Fluxo do Sistema
+##🔄 Fluxo do Sistema
 
 1️⃣ Responsável
 Preenche o formulário
@@ -66,7 +66,7 @@ JavaScript	Firebase Hosting
 Canvas API	Google Apps Script
 Base64	Gmail API
 
-🔐 Segurança
+##🔐 Segurança
 
 O sistema utiliza regras de segurança no Firebase para:
 
@@ -76,7 +76,7 @@ Impedir listagem indevida
 Bloquear múltiplas confirmações
 Validar assinaturas digitais
 
-🚧 Desafios Técnicos
+##🚧 Desafios Técnicos
 
 Implementação de assinatura digital
 Controle de validação única
@@ -85,7 +85,7 @@ Persistência segura no Firestore
 Geração dinâmica de documentos
 Controle de fluxo entre múltiplos usuários
 
-📱 Compatibilidade
+##📱 Compatibilidade
 
 Sistema responsivo para:
 
@@ -98,7 +98,7 @@ Hospedado utilizando:
 
 Firebase Hosting
 
-👨‍💻 Meu Papel no Projeto
+##👨‍💻 Meu Papel no Projeto
 
 Responsável pelo desenvolvimento completo do sistema:
 
