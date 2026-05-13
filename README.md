@@ -140,32 +140,6 @@ Responsável pelo desenvolvimento completo do sistema:
 
 ---
 
-# 📸 Imagens do Sistema
-
-## Tela de Inscrição
-
-![Tela de Inscrição](./assets/tela-inscricao.png)
-
----
-
-## Assinatura Digital
-
-![Assinatura Digital](./assets/assinatura.png)
-
----
-
-## Validação Escolar
-
-![Validação Escolar](./assets/validacao-escola.png)
-
----
-
-## Documento Final
-
-![Documento Final](./assets/documento-final.png)
-
----
-
 # 👨‍💻 Autor
 
 Desenvolvido por **Kaio Oliveira**
