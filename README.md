@@ -2,78 +2,119 @@
 - 🇧🇷 Português (este arquivo)
 - 🇮🇹 Italiano → [README.it.md](README.IT.md)
 
-# Projeto Sacada Certa
+🏐 Sacada Certa
 
-Sistema digital de inscrição para projetos esportivos desenvolvido para a Secretaria de Esportes, Lazer e Juventude do município de Carlos Barbosa.
+Sistema web desenvolvido para a Secretaria de Esportes, Lazer e Juventude do município de Carlos Barbosa – RS, responsável pela digitalização do processo de inscrição em projetos esportivos municipais.
 
-O sistema permite que responsáveis realizem a inscrição de alunos em projetos esportivos de forma online, com assinatura digital e confirmação da escola.
+✅ Sistema em produção
+✅ Inscrições 100% online
+✅ Assinaturas digitais
+✅ Integração com Firebase
+✅ Automação de e-mails
+✅ Utilizado em contexto institucional
 
----
+🚀 Visão Geral
 
-## 🚀 Funcionalidades
+O projeto Sacada Certa foi desenvolvido para automatizar o processo de inscrição de alunos em projetos esportivos municipais, eliminando formulários físicos e reduzindo processos manuais.
 
-- Formulário de inscrição online
-- Upload da foto do aluno
-- Assinatura digital do responsável
-- Armazenamento das inscrições no Firebase (Cloud Firestore)
-- Envio automático de e-mail para a escola
-- Confirmação da escola com assinatura digital
-- Envio automático do documento final para a Secretaria
-- Geração de documento com todas as informações da inscrição
+O sistema conecta:
 
----
+Responsável → Escola → Secretaria
 
-## 🛠 Tecnologias Utilizadas
+garantindo:
+
+Segurança dos dados
+Fluxo digital automatizado
+Integridade das informações
+Assinaturas digitais
+Armazenamento em nuvem
+Rastreabilidade do processo
+
+🧠 Funcionalidades
+
+Formulário de inscrição online
+Upload de foto do aluno
+Assinatura digital
+Validação escolar
+Envio automático de e-mails
+Geração de documento final
+Persistência no Firestore
+Controle de status das inscrições
+
+🔄 Fluxo do Sistema
+
+1️⃣ Responsável
+Preenche o formulário
+Envia dados do aluno
+Assina digitalmente
+Finaliza a inscrição
+2️⃣ Escola
+Recebe link único por e-mail
+Confirma os dados
+Assina digitalmente
+Valida a inscrição
+3️⃣ Secretaria
+Recebe documento final
+Realiza controle institucional
+Armazena os registros
+
+🛠️ Tecnologias Utilizadas
+Frontend	Backend / Cloud
+HTML5	Firebase
+CSS3	Cloud Firestore
+JavaScript	Firebase Hosting
+Canvas API	Google Apps Script
+Base64	Gmail API
+
+🔐 Segurança
+
+O sistema utiliza regras de segurança no Firebase para:
+
+Permitir criação de inscrições
+Restringir leitura por ID
+Impedir listagem indevida
+Bloquear múltiplas confirmações
+Validar assinaturas digitais
+
+🚧 Desafios Técnicos
+
+Implementação de assinatura digital
+Controle de validação única
+Automação de e-mails
+Persistência segura no Firestore
+Geração dinâmica de documentos
+Controle de fluxo entre múltiplos usuários
+
+📱 Compatibilidade
+
+Sistema responsivo para:
+
+Desktop
+Tablets
+Smartphones
+🛠️ Deploy
+
+Hospedado utilizando:
+
+Firebase Hosting
+
+👨‍💻 Meu Papel no Projeto
+
+Responsável pelo desenvolvimento completo do sistema:
 
 Frontend
-- HTML5
-- CSS3
-- JavaScript
+Integração Firebase
+Regras de segurança
+Assinatura digital
+Automação de e-mails
+Deploy e publicação
 
-Backend / Cloud
-- Firebase
-- Cloud Firestore
-- Firebase Hosting
+👨‍💻 Autor
 
-Automação
-- Google Apps Script
-- Gmail API
+Desenvolvido por Kaio Oliveira
 
-Outros recursos
-- Canvas API (assinatura digital)
-- Base64 Image Encoding
+Sistema real utilizado pela Secretaria de Esportes, Lazer e Juventude de Carlos Barbosa – RS.
 
----
+✅ Status do Projeto
 
-## 🔄 Fluxo do Sistema
-
-1. Responsável acessa o sistema
-2. Preenche o formulário de inscrição
-3. Assina digitalmente
-4. Os dados são salvos no Firebase
-5. A escola recebe um e-mail com o link para confirmação
-6. A escola confirma e assina digitalmente
-7. A Secretaria recebe o documento final por e-mail
-
----
-
-## 🔒 Segurança
-
-O sistema utiliza regras de segurança do Firebase para:
-
-- permitir criação de inscrições
-- permitir leitura somente por ID
-- impedir listagem de inscrições
-- permitir confirmação apenas uma vez pela escola
-
----
-
-## 🌐 Hospedagem
-
-O sistema é hospedado utilizando **Firebase Hosting**.
-
----
-
-## 👨‍💻 Desenvolvedor
-
-Desenvolvido por **Kaio Oliveira**.
+🟢 Finalizado e em produção
